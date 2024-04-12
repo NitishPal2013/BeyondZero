@@ -5,6 +5,10 @@ from datetime import datetime, timezone
 from database import (all_notes, save_note)
 from utils import query_search
 from database import complete_notes_collection
+import uvicorn
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 app = FastAPI()
 
@@ -49,3 +53,6 @@ async def sendnotes(username: str):
 async def AskQuery(query:QueryModel):
     res = await query_search(query.query, complete_notes_collection)
     return res
+
+if __name__ == "__main__":
+    uvicorn.run("main:app", host="0.0.0.0", port=os.environ["PORT"], reload=True)
