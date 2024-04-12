@@ -10,6 +10,7 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
+PORT = int(os.environ["PORT"])
 app = FastAPI()
 
 
@@ -55,4 +56,4 @@ async def AskQuery(query:QueryModel):
     return res
 
 if __name__ == "__main__":
-    uvicorn.run("main:app", host="0.0.0.0", port=os.environ["PORT"], reload=True)
+    uvicorn.run("main:app", host="0.0.0.0", port=PORT, reload=True)
