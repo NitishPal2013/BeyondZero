@@ -4,4 +4,3 @@ youtube-transcript-api
 beautifulsoup4
 langchain
 langchain-google-genai
-frontend/node_modules
