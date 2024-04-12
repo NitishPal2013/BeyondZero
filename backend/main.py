@@ -11,6 +11,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 PORT = int(os.environ["PORT"])
+
 app = FastAPI()
 
 
