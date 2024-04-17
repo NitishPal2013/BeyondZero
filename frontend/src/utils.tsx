@@ -5,7 +5,6 @@ export function timeDifference(date: Date): string {
     }
     const diffTime = Math.abs(currentDate.getTime() - date.getTime());
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-    console.log(diffDays)
     if (diffDays === 1) {
       return 'Yesterday';
     } else if (diffDays > 1 && diffDays <= 30) {
@@ -20,3 +19,5 @@ export function timeDifference(date: Date): string {
     }
   }
   
+
+  export const BASE_URL = "https://beyondzero.onrender.com"

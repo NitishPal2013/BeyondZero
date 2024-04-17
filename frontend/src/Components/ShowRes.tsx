@@ -43,7 +43,7 @@ const ShowRes : React.FC<URLlistProp>  = ({URLlist, setURLlist}: URLlistProp) =>
           </ListItemPrefix>
           <Typography
                   as="a"
-                  href="https://google.com"
+                  href={url}
                   target="_blank"
                   color="white"
                   className="font-medium !text-gray-500 transition-colors hover:!text-gray-900"

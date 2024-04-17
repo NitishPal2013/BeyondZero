@@ -3,7 +3,7 @@ import axios from 'axios'
 import Navbar from '../Components/Navbar'
 import ShowNote from './ShowNote';
 import { Typography } from '@material-tailwind/react';
-import {timeDifference} from '../utils';
+import {BASE_URL, timeDifference} from '../utils';
 import { UsernameContext } from '../App';
 
 export interface dataType{
@@ -20,7 +20,7 @@ const Base : React.FC = () => {
   const user = useContext(UsernameContext);
 
   useEffect(() => {
-    const url = 'http://127.0.0.1:8000/base';
+    const url = BASE_URL + "/base";
     axios.get(url, {
       params: {
         username: user

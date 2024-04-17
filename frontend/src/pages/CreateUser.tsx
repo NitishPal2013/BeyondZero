@@ -16,8 +16,11 @@ const CreateUser : React.FC<usernameProp> = ({setUsername}: usernameProp) => {
 
   return (
     <>
-    <Typography variant='h2' className='text-center mt-2'>Go BeyondZero!</Typography>
-        <Card color="transparent" shadow={true} className='w-3/5 mx-auto mt-32 p-2 flex text-center'>
+    <img src="/mainlogo.png" width="64" height="64" alt="icon" className='mx-auto'/>
+    <Typography variant='h2' className='text-center mt-2'>
+    NoteQuest
+    </Typography>
+        <Card color="transparent" shadow={true} className='w-3/5 mx-auto mt-16 p-2 flex text-center'>
         <Typography color="gray" className="mt-1 font-normal">
           Go BeyondZero
         </Typography>

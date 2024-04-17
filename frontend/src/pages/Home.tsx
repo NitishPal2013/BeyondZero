@@ -11,8 +11,8 @@ const Home : React.FC = () => {
     <>
     <Navbar route="Base" path="/base" />
       <div className="w-3/5 mx-auto">
-        <Typography variant='lead'>{username} is now BeyondZero!! </Typography>
-        <Typography variant="h3">Step beyond the ordinary note-taking experience, gather your thoughts in a single, organized hub.</Typography>
+        <Typography variant='lead'>Welcome <span className='font-semibold'>{username}</span>!! </Typography>
+        <Typography className='text-xl font-bold'>Step beyond the ordinary note-taking experience, gather your thoughts in a single, organized hub.</Typography>
       </div>
        <NotesSave />
     </>

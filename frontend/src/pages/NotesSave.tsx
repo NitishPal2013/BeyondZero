@@ -5,6 +5,7 @@ import { Button, Input } from '@material-tailwind/react';
 import AddRes from '../Components/AddRes';
 import axios from 'axios';
 import { UsernameContext } from '../App';
+import { BASE_URL } from '../utils';
 
 const NotesSave: React.FC = () => {
   const [value, setValue] = useState<string>('');
@@ -25,7 +26,7 @@ const NotesSave: React.FC = () => {
     setTitle("");
     setResList([]);
 
-    const url = 'http://127.0.0.1:8000/addnote';
+    const url = BASE_URL+'/addnote';
 
     console.log(sendData);
 
@@ -51,7 +52,7 @@ const NotesSave: React.FC = () => {
           </h5>
           <Button size='sm' color='blue' variant='outlined' onClick={SaveNote}>Save Notes</Button>
         </div>
-        <div className='my-6'>
+        <div className='my-6 lg:my-4'>
           <p className='mb-2 font-sans text-xl text-gray-900 font-medium'>Title : </p>
           <Input
             type='text'
@@ -64,7 +65,9 @@ const NotesSave: React.FC = () => {
           <ReactQuill theme="snow" value={value} onChange={setValue} style={{ height: "200px", marginBottom: "25px" }} />
         </div>
         <br />
+        <div className='mt-16 lg:mt-2'>
         <AddRes resList={resList} setResList={setResList} />
+        </div>
       </div>
     </>
 

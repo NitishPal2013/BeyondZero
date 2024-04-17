@@ -16,11 +16,11 @@ const Navbar: React.FC<routeProp> = ({route, path}: routeProp) => {
     <>
       <div className="flex justify-between text-center flex-row w-3/5 mx-auto mt-5 mb-5">
         <div className='flex items-center'>
-        <img src="/vite.svg" alt="icon" />
-        <Typography variant='h6' className='ml-2'>BeyondZero</Typography>
+        <img src="/mainlogo.png" width="42" height="42" alt="icon" />
+        <Typography variant='h6' className='ml-2'>NoteQuest</Typography>
         </div>
         <div>
-          <span onClick={() => setShowOverlay(true)} >Ask?</span>
+          <span onClick={() => setShowOverlay(true) }  className='hover:cursor-pointer'>Ask?</span>
           <AskQuest
             showOverlay={showOverlay}
             closeOverlay={setShowOverlay}
